@@ -37,7 +37,22 @@ class LinkedList:
             print("List is empty")
         else:
             self.head = self.head.next
+    
+    def delete_at_any_point(self, data):
+        
+        if self.head is None:
+            print("List is Empth")
+        else:
             
+            current = self.head
+            
+            while current.next.data != data and current.next is not None:
+                current = current.next
+            if current.next is not None:
+                current.next = current.next.next
+            else:
+                print("Data not found in the list")
+    
     def delete_at_end(self):
         current = self.head
         
@@ -80,6 +95,10 @@ LL.print_list()
 
 LL.delete_at_beggining()
 print("Linked List after deleting at beginning:")
+LL.print_list()
+
+LL.delete_at_any_point(40)
+print("Linked List after deleting at any point:")
 LL.print_list()
 
 LL.delete_at_end()
