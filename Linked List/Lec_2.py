@@ -18,58 +18,55 @@ class LinkedList:
         else:
             new_node.next = self.head
             self.head = new_node
-            
+
     def append_at_end(self, data):
-        
+
         new_node = Node(data)
-        
+
         if self.head is None:
             self.head = new_node
         else:
-            current = self.head 
+            current = self.head
             while current.next is not None:
                 current = current.next
             current.next = new_node
-            
+
     def delete_at_beggining(self):
-        
+
         if self.head is None:
             print("List is empty")
         else:
             self.head = self.head.next
-    
+
     def delete_at_any_point(self, data):
-        
+
         if self.head is None:
             print("List is Empth")
         else:
-            
+
             current = self.head
-            
+
             while current.next.data != data and current.next is not None:
                 current = current.next
             if current.next is not None:
                 current.next = current.next.next
             else:
                 print("Data not found in the list")
-    
+
     def delete_at_end(self):
         current = self.head
-        
+
         if self.head is None:
             print("List is empty")
-        
+
         elif self.head.next is None:
             self.head = None
-            
+
         else:
             while current.next.next is not None:
                 current = current.next
             current.next = None
 
-                
-        
-            
     def print_list(self):
 
         current = self.head
