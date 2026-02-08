@@ -1,4 +1,4 @@
-# dsa_python
+# DSA Python
 
 ## Overview
 
@@ -53,6 +53,6 @@ You can contribute by adding new problems, improving existing solutions, or opti
 
 ## Author
 
-**Muhammad Talha**
-Computer Science student
+**Muhammad Talha** <br>
+Computer Science student <br> 
 Focused on Python, DSA, and AI ML
