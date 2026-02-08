@@ -13,7 +13,7 @@ This repository contains **Data Structures and Algorithms** implementations in *
 
 ## Contents
 
-<!-- * **Arrays and Strings** -->
+* **Arrays**
 * **Linked Lists**
 <!-- * **Stacks and Queues**
 * **Hashing**
