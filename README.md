@@ -1,4 +1,4 @@
-# dsa_python
+# DSA Python
 
 ## Overview
 
