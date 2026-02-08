@@ -54,5 +54,5 @@ You can contribute by adding new problems, improving existing solutions, or opti
 ## Author
 
 **Muhammad Talha**
-Computer Science student
+Computer Science student \b
 Focused on Python, DSA, and AI ML
