@@ -48,7 +48,23 @@ class LinkedList:
             new_node.next = current.next
             current.next = new_node
             
+    def append_after_node(self, data, prev_data):
         
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            
+        else:
+            current = self.head
+            
+            while current is not None and current.data != prev_data:
+                current = current.next
+            if current is None:
+                print(f"Node with data {prev_data} not found.")
+                return
+            new_node.next = current.next
+            current.next = new_node
+                
     def print_list(self):
         current = self.head
         while current is not None:
@@ -74,4 +90,7 @@ LL.print_list()
 
 LL.append_at_any_point(25, 2)
 
+LL.print_list()
+
+LL.append_after_node(35, 30)
 LL.print_list()
