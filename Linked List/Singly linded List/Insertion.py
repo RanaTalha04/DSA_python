@@ -27,6 +27,28 @@ class LinkedList:
                 current = current.next
             current.next = new_node
     
+    def append_at_any_point(self, data, position):
+        
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        
+        elif position == 0:
+            new_node.next = self.head
+            self.head = new_node
+        
+        else:
+            current = self.head
+            count = 0
+            
+            while count < position - 1 and current.next is not None:
+                current = current.next
+                count += 1
+            
+            new_node.next = current.next
+            current.next = new_node
+            
+        
     def print_list(self):
         current = self.head
         while current is not None:
@@ -47,5 +69,9 @@ LL.print_list()
 LL.append_at_end(40)
 LL.append_at_end(50)
 LL.append_at_end(60)
+
+LL.print_list()
+
+LL.append_at_any_point(25, 2)
 
 LL.print_list()

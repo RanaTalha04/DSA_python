@@ -30,7 +30,29 @@ class LinkedList:
             while current.next is not None:
                 current = current.next
             current.next = new_node
-
+    
+    def append_at_any_point(self, data, position):
+        
+        new_node = Node(data)
+        
+        if self.head is None:
+            self.head = new_node
+        
+        elif position == 0:
+            new_node.next = self.head
+            self.head = new_node
+        else:
+            
+            current = self.head
+            count = 0
+            
+            while count < position - 1 and current.next is not None:
+                current = current.next
+                count +=1
+            
+            new_node.next = current.next
+            current.next = new_node
+             
     def delete_at_beggining(self):
 
         if self.head is None:
@@ -52,7 +74,7 @@ class LinkedList:
                 current.next = current.next.next
             else:
                 print("Data not found in the list")
-
+                
     def delete_at_end(self):
         current = self.head
 
@@ -88,6 +110,11 @@ LL.append_at_end(40)
 LL.append_at_end(50)
 LL.append_at_end(60)
 print("Linked List after appending at end:")
+LL.print_list()
+
+LL.append_at_any_point(25, 2)
+LL.append_at_any_point(5, 0)
+print("Linked List after appending at any point:")
 LL.print_list()
 
 LL.delete_at_beggining()
