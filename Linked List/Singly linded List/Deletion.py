@@ -63,7 +63,12 @@ class LinkedList:
     def delete_at_any_point(self, data):
 
         if self.head is None:
-            print("List is Empth")
+            print("List is Empty")
+        
+        if self.head.data == data:
+            self.head = self.head.next
+            return
+        
         else:
 
             current = self.head
